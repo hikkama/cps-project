@@ -1,0 +1,214 @@
+// Импорт
+@import '_nullcss'; // Обнуление
+@import '_fonts'; // Шрифты
+//====
+
+// Переменные
+$fz: 14px;
+
+$maincolor: #1b1c21;
+$textcolor: #7e7e82;
+$bgcolor: #f8f8f8;
+$accent: #ff3e79;
+$accent2: #41f6d7;
+//====
+
+// Body
+body {
+  font-family: 'TT Lakes', sans-serif;
+  font-size: $fz;
+  color: $maincolor;
+
+  background-color: $bgcolor;
+}
+//====
+
+.container {
+  padding: 0 16px;
+}
+
+// Header
+.header {
+  background-color: #fff;
+  &__inner {
+    min-height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__column {
+    display: flex;
+    align-items: center;
+  }
+  &__link {
+    margin-right: 16px;
+  }
+}
+
+.link-icon {
+  color: inherit;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  & img {
+    vertical-align: middle;
+  }
+}
+
+.menu {
+  &__btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    padding: 11px;
+
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  &__line {
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 1px;
+
+    position: relative;
+  }
+  &__line::before {
+    content: '';
+    width: 18px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 1px;
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+  }
+  &__line::after {
+    content: '';
+    width: 12px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 1px;
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+  }
+}
+
+.logo {
+  position: relative;
+  &::after {
+    content: '';
+    width: 2px;
+    height: 32px;
+
+    background-color: #eaeaea;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -16px;
+  }
+}
+
+//====
+
+// Services
+.services {
+  margin: 24px 0;
+  position: relative;
+  &__nav {
+    display: none;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__title::before {
+    content: '';
+    width: 4px;
+    height: 40px;
+
+    background-color: $accent2;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    position: absolute;
+    left: 0;
+  }
+
+  &__info {
+    margin-bottom: 16px;
+    padding: 0 16px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+  }
+
+  &__btn-more {
+    background-color: $bgcolor;
+
+    font-size: $fz + 2;
+    font-weight: 500;
+
+    position: relative;
+  }
+
+  &__btn-more::before {
+    content: url('../img/services/services-more.svg');
+    margin-right: 16px;
+  }
+  &__img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.content-menu {
+  display: flex;
+  overflow: scroll;
+  align-items: center;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &__link {
+    flex-shrink: 0;
+    margin-bottom: 13px;
+    margin-right: 20px;
+    padding: 8px 10px;
+
+    font-size: $fz + 2;
+    color: $textcolor;
+  }
+  &__link--active {
+    background-color: #fff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+}
+
+.text {
+  line-height: 20px;
+  font-weight: 300;
+}
+
+.title {
+  font-size: $fz * 2;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+//====
+
+// Media queries
+@import '_tablet768';
+@import '_desktop1120';
+
+//====

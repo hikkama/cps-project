@@ -1,0 +1,30 @@
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .menu__btn {
+    margin-right: 42px;
+  }
+
+  .logo::after {
+    left: -21px;
+  }
+
+  .services {
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+    }
+    &__info {
+      padding-right: 48px;
+      // max-width: 315px;
+    }
+    &__img img {
+      width: auto;
+      max-width: 362px;
+      height: auto;
+    }
+  }
+}

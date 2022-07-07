@@ -1,0 +1,54 @@
+@media (min-width: 1120px) {
+  .container {
+    max-width: 1056px;
+    margin: 0 auto;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .services {
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 40px;
+    }
+    &__link {
+      margin-right: 30px;
+    }
+    &__link img {
+      margin-left: 8px;
+    }
+    &__nav {
+      display: block;
+    }
+    &__title {
+      position: relative;
+      padding-left: 24px;
+    }
+    &__menu {
+      overflow: auto;
+      flex-wrap: wrap;
+    }
+    &__row {
+      max-width: 1056px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    &__info {
+      padding-right: 36px;
+      max-width: 490px;
+      padding-left: 0;
+    }
+    &__img img {
+      width: 100%;
+      max-width: none;
+      height: auto;
+    }
+  }
+
+	.content-menu__link {
+		margin-right: 0;
+	}
+}
