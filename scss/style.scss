@@ -1,5 +1,5 @@
 // Импорт
-@import '_nullcss'; // Обнуление
+@import '_normalize';
 @import '_fonts'; // Шрифты
 //====
 
@@ -47,13 +47,28 @@ body {
 
 .link-icon {
   color: inherit;
+  position: relative;
   &:last-child {
     margin-right: 0;
   }
+}
 
-  & img {
-    vertical-align: middle;
-  }
+.link-icon--repair::after {
+  content: '';
+  background-image: url(../img/header/repair.svg);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.link-icon--status::after {
+  content: '';
+  background-image: url(../img/header/checkstatus.svg);
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .menu {
@@ -124,11 +139,11 @@ body {
 .services {
   margin: 24px 0;
   position: relative;
+  &__header {
+    margin-bottom: 20px;
+  }
   &__nav {
     display: none;
-  }
-  &__title {
-    margin-bottom: 20px;
   }
   &__title::before {
     content: '';
