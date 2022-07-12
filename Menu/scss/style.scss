@@ -1,0 +1,235 @@
+@import '_fonts';
+@import '_normalize';
+
+$accent: #ff3e79;
+
+.main-menu {
+	box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  height: 100vh;
+  padding: 0 24px;
+
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  position: absolute;
+  left: 0;
+
+  font-family: 'TT Lakes';
+  font-weight: 500;
+  font-size: 16px;
+  color: #1b1c21;
+
+  &__header {
+		display: flex;
+		align-items: center;
+  }
+
+  &__btn {
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    padding: 11px;
+
+		cursor: pointer;
+
+    border-radius: 50%;
+    background-color: $accent;
+
+		transition: opacity .2s linear;
+  }
+
+	&__btn:hover {
+		opacity: .8;
+	}
+
+  &__btn-line {
+    display: block;
+    width: 22px;	
+    height: 2px;
+
+    background-color: none;
+    border-radius: 1px;
+
+    position: relative;
+  }
+  &__btn-line::before {
+    content: '';
+    width: 22px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 1px;
+
+    position: absolute;
+    top: -5px;
+    left: 0;
+
+    transform: rotate(45deg) translate(2px, 5px);
+  }
+  &__btn-line::after {
+    content: '';
+    width: 22px;
+    height: 2px;
+
+    background-color: #fff;
+    border-radius: 1px;
+
+    position: absolute;
+    top: 5px;
+    left: 0;
+		transform: rotate(-45deg) translate(2px, -5px);
+  }
+
+  &__logo {
+		flex-grow: 1;
+  }
+
+  &__column--header {
+		margin-bottom: 50px;
+    padding-top: 23px;
+  }
+
+  &__column--stretch {
+    flex-grow: 1;
+  }
+
+  &__column--footer {
+    padding-bottom: 32px;
+  }
+
+  &__list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+  }
+
+  &__list-item {
+		margin-bottom: 32px;
+  }
+	
+
+	&__list-item:last-child {
+		margin-bottom: 0;
+  }
+
+  &__list-item--active {
+		color: #7E7E82;
+		position: relative;
+  }
+	&__list-item--active::before {
+    content: '';
+    width: 4px;
+    height: 40px;
+    background-color: #41f6d7;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: absolute;
+		top: -50%;
+    left: -24px;
+  }
+
+	&__list-item a{
+		color: inherit;
+
+		transition: color .2s linear;
+  }
+
+	&__list-item a:hover {
+		color: #7E7E82;
+  }
+
+  &__footer-icons {
+		display: flex;
+		column-gap: 16px;
+
+		margin-bottom: 16px;
+  }
+
+  &__footer-email {
+		display: block;
+		margin-bottom: 12px;
+
+		color: inherit;
+  }
+
+	&__footer-email:hover  {
+		text-decoration: underline;
+	}
+
+  &__footer-tel {
+		display: block;
+		margin-bottom: 40px;
+
+		color: inherit;
+		font-weight: 700;
+		font-size: 24px;
+
+		transition: color .2s linear;
+  }
+
+	&__footer-tel:hover {
+		color: #7E7E82;
+	}
+}
+
+.link-icon {
+  position: relative;
+
+	transition: opacity .2s linear;
+}
+
+.link-icon:hover {
+	opacity: .8;
+}
+
+.link-icon--search {
+	content: '';
+  background-image: url(../img/search.svg);
+  width: 40px;
+  height: 40px;
+}
+
+.link-icon--phone {
+	content: '';
+  background-image: url(../img/phone.svg);
+  width: 40px;
+  height: 40px;
+}
+.link-icon--message {
+	content: '';
+  background-image: url(../img/chat.svg);
+  width: 40px;
+  height: 40px;
+}
+.link-icon--profile {
+	content: '';
+  background-image: url(../img/profile.svg);
+  width: 40px;
+  height: 40px;
+}
+
+.language-switcher {
+  &__item {
+		cursor: pointer;
+		background-color: inherit;
+		padding: 0;
+		margin-right: 7px;
+
+		transition: color .2s linear;
+  }
+
+	&__item:last-child {
+		margin-right: 0;
+  }
+	&__item:hover {
+		color: #7E7E82;
+  }
+
+  &__item--active {
+		color: #7E7E82;
+  }
+}
