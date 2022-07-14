@@ -4,12 +4,9 @@
 $accent: #ff3e79;
 
 .main-menu {
-	box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 
   width: 320px;
-  height: 100vh;
   padding: 0 24px;
 
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
@@ -23,9 +20,9 @@ $accent: #ff3e79;
   font-size: 16px;
   color: #1b1c21;
 
-  &__header {
-		display: flex;
-		align-items: center;
+  &__header-inner {
+    display: flex;
+    align-items: center;
   }
 
   &__btn {
@@ -34,21 +31,21 @@ $accent: #ff3e79;
     margin-right: 16px;
     padding: 11px;
 
-		cursor: pointer;
+    cursor: pointer;
 
     border-radius: 50%;
     background-color: $accent;
 
-		transition: opacity .2s linear;
+    transition: opacity 0.2s linear;
   }
 
-	&__btn:hover {
-		opacity: .8;
-	}
+  &__btn:hover {
+    opacity: 0.8;
+  }
 
   &__btn-line {
     display: block;
-    width: 22px;	
+    width: 22px;
     height: 2px;
 
     background-color: none;
@@ -81,46 +78,45 @@ $accent: #ff3e79;
     position: absolute;
     top: 5px;
     left: 0;
-		transform: rotate(-45deg) translate(2px, -5px);
+    transform: rotate(-45deg) translate(2px, -5px);
   }
 
   &__logo {
-		flex-grow: 1;
-  }
-
-  &__column--header {
-		margin-bottom: 50px;
-    padding-top: 23px;
-  }
-
-  &__column--stretch {
     flex-grow: 1;
   }
 
-  &__column--footer {
+  &__header {
+    margin-bottom: 50px;
+    padding-top: 23px;
+  }
+
+  &__nav {
+    margin-bottom: 240px;
+  }
+
+  &__footer {
     padding-bottom: 32px;
   }
 
   &__list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   &__list-item {
-		margin-bottom: 32px;
+    margin-bottom: 32px;
   }
-	
 
-	&__list-item:last-child {
-		margin-bottom: 0;
+  &__list-item:last-child {
+    margin-bottom: 0;
   }
 
   &__list-item--active {
-		color: #7E7E82;
-		position: relative;
+    color: #7e7e82;
+    position: relative;
   }
-	&__list-item--active::before {
+  &__list-item--active::before {
     content: '';
     width: 4px;
     height: 40px;
@@ -128,85 +124,85 @@ $accent: #ff3e79;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     position: absolute;
-		top: -50%;
+    top: -50%;
     left: -24px;
   }
 
-	&__list-item a{
-		color: inherit;
+  &__list-item a {
+    color: inherit;
 
-		transition: color .2s linear;
+    transition: color 0.2s linear;
   }
 
-	&__list-item a:hover {
-		color: #7E7E82;
+  &__list-item a:hover {
+    color: #7e7e82;
   }
 
   &__footer-icons {
-		display: flex;
-		column-gap: 16px;
+    display: flex;
+    column-gap: 16px;
 
-		margin-bottom: 16px;
+    margin-bottom: 16px;
   }
 
   &__footer-email {
-		display: block;
-		margin-bottom: 12px;
+    display: block;
+    margin-bottom: 12px;
 
-		color: inherit;
+    color: inherit;
   }
 
-	&__footer-email:hover  {
-		text-decoration: underline;
-	}
+  &__footer-email:hover {
+    text-decoration: underline;
+  }
 
   &__footer-tel {
-		display: block;
-		margin-bottom: 40px;
+    display: block;
+    margin-bottom: 40px;
 
-		color: inherit;
-		font-weight: 700;
-		font-size: 24px;
+    color: inherit;
+    font-weight: 700;
+    font-size: 24px;
 
-		transition: color .2s linear;
+    transition: color 0.2s linear;
   }
 
-	&__footer-tel:hover {
-		color: #7E7E82;
-	}
+  &__footer-tel:hover {
+    color: #7e7e82;
+  }
 }
 
 .link-icon {
   position: relative;
 
-	transition: opacity .2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .link-icon:hover {
-	opacity: .8;
+  opacity: 0.8;
 }
 
 .link-icon--search {
-	content: '';
+  content: '';
   background-image: url(../img/search.svg);
   width: 40px;
   height: 40px;
 }
 
 .link-icon--phone {
-	content: '';
+  content: '';
   background-image: url(../img/phone.svg);
   width: 40px;
   height: 40px;
 }
 .link-icon--message {
-	content: '';
+  content: '';
   background-image: url(../img/chat.svg);
   width: 40px;
   height: 40px;
 }
 .link-icon--profile {
-	content: '';
+  content: '';
   background-image: url(../img/profile.svg);
   width: 40px;
   height: 40px;
@@ -214,22 +210,22 @@ $accent: #ff3e79;
 
 .language-switcher {
   &__item {
-		cursor: pointer;
-		background-color: inherit;
-		padding: 0;
-		margin-right: 7px;
+    cursor: pointer;
+    background-color: inherit;
+    padding: 0;
+    margin-right: 7px;
 
-		transition: color .2s linear;
+    transition: color 0.2s linear;
   }
 
-	&__item:last-child {
-		margin-right: 0;
+  &__item:last-child {
+    margin-right: 0;
   }
-	&__item:hover {
-		color: #7E7E82;
+  &__item:hover {
+    color: #7e7e82;
   }
 
   &__item--active {
-		color: #7E7E82;
+    color: #7e7e82;
   }
 }

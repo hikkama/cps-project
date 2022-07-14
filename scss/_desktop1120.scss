@@ -8,19 +8,19 @@
     display: none;
   }
 
-	.link-icon--repair::after {
-		margin-left: 13px;
-	}
+  .link-icon--repair::after {
+    margin-left: 13px;
+  }
 
-	.link-icon--status::after {
-		margin-left: 13px;
-	}
+  .link-icon--status::after {
+    margin-left: 13px;
+  }
 
   .services {
     &__header {
       display: flex;
       justify-content: space-between;
-			align-items: center;
+      align-items: center;
       padding-top: 40px;
     }
     &__nav-link {
@@ -59,23 +59,25 @@
 
   .content-menu__link {
     margin-right: 0;
-		padding: 8px 18px;
+    padding: 8px 18px;
   }
 
-	.brands {
+  .brands {
+    &__title {
+      margin: 0;
+      margin-bottom: 24px;
+    }
 
-		&__title {
-			margin: 0;
-			margin-bottom: 24px;
-		}
+    &__items {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 32px;
+    }
 
-		&__items {
-			grid-template-columns: repeat(4, 1fr);
-			column-gap: 32px;
-		}
-
-		&__item {
-			width: 206px;
-		}
-	}
+    &__item {
+      width: 206px;
+    }
+  }
+  .brands__items.brands__items--expanded {
+    max-height: 300px;
+  }
 }
