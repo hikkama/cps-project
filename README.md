@@ -2,4 +2,5 @@
 1 задание по верстке 
 
 Использовал препроцессор scss и flexbox
-https://hikkama.github.io/cps-project
+
+Ссылка на макет - https://hikkama.github.io/cps-project
