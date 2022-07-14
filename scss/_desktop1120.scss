@@ -59,5 +59,23 @@
 
   .content-menu__link {
     margin-right: 0;
+		padding: 8px 18px;
   }
+
+	.brands {
+
+		&__title {
+			margin: 0;
+			margin-bottom: 24px;
+		}
+
+		&__items {
+			grid-template-columns: repeat(4, 1fr);
+			column-gap: 32px;
+		}
+
+		&__item {
+			width: 206px;
+		}
+	}
 }

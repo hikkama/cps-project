@@ -27,4 +27,45 @@
       height: auto;
     }
   }
+
+	//  Brands
+	.brands--mobile {
+		display: none;
+	}
+
+	.brands--notmobile {
+		display: block;
+	}
+	
+	.brands {
+		margin: 50px 0;
+		&__title {
+			margin: 0 -24px 24px;
+	
+			border-top: 1px solid #D9FFF5;
+			background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+	
+			color: $textcolor;
+			text-transform: uppercase;
+			font-size: $fz+2;
+			font-weight: 400;
+		}
+	
+		&__items {
+			display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+			justify-items: center;
+			row-gap: 16px;
+			column-gap: 24px;
+	
+			margin-bottom: 24px;
+		}
+
+		&__item {
+			width: 190px;
+		}
+	}
+	
+	
+
 }

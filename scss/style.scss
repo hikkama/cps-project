@@ -166,8 +166,13 @@ body {
   &__text {
     margin-bottom: 16px;
   }
+  &__img img {
+    width: 100%;
+    height: auto;
+  }
+}
 
-  &__btn-more {
+.btn-more {
     background-color: $bgcolor;
 
     font-size: $fz + 2;
@@ -175,17 +180,20 @@ body {
     color: $maincolor;
 
     position: relative;
-  }
-
-  &__btn-more::before {
+		cursor: pointer;
+  &::before {
     content: url('../img/services/services-more.svg');
     margin-right: 16px;
   }
-  &__img img {
-    width: 100%;
-    height: auto;
-  }
+	&--close {
+		display: none;
+	}
+	&--close::before {
+		content: url('../img/services/expand.svg');
+    margin-right: 16px;
+	}
 }
+
 
 .content-menu {
   display: flex;
@@ -223,7 +231,111 @@ body {
 
 //====
 
+// Brands
+
+.brands {
+	margin: 50px 0;
+	&__title {
+		// margin-bottom: 16px;
+		padding: 15px 24px;
+
+		border-top: 1px solid #D9FFF5;
+		background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+
+		color: $textcolor;
+		text-transform: uppercase;
+		font-size: $fz+2;
+		font-weight: 400;
+	}
+	&__item {
+		width: 210px;
+		height: 55px;
+		padding: 11px 16px;	
+	}
+}	
+
+.box-link {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	border: 1px solid #EAEAEA;
+	border-radius: 6px;	
+
+	&__btn {
+		display: block;
+		width: 40px;
+		height: 40px;
+
+		background: url(../img/brands/go.svg);
+
+		cursor: pointer;
+	}
+}
+.brands--notmobile {
+	display: none;
+}
+
+//====
+
+// Swiper
+
+.swiper {
+  height: 120px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: #DDDDDD;
+  opacity: 1;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+	background-color: #B5B6BC; /*orange color*/
+	opacity: 1;
+}
+
+.swiper-slide {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: start;
+}
+
+.swiper-slide:nth-child(1n) {
+	width: 85%;
+}
+.swiper-slide:nth-child(2n) {
+	width: 85%;
+}
+
+.swiper-slide:nth-child(3n) {
+	width: 85%;
+}
+
+//====
+
 // Media queries
+
+@media (min-width: 400px) {
+	.swiper-slide:nth-child(1n) {
+		width: 100%;
+	}
+	.swiper-slide:nth-child(2n) {
+		width: 100%;
+	}
+	
+	.swiper-slide:nth-child(3n) {
+		width: 100%;
+	}
+}
+
 @import '_tablet768';
 @import '_desktop1120';
 
